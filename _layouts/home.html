@@ -2,7 +2,9 @@
 layout: default
 ---
 
+
 <div class="home">
+  <link rel="stylesheet" href="/assets/css/home.css">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
@@ -16,7 +18,6 @@ layout: default
     {% assign posts = site.posts %}
   {% endif %}
 
-
   {%- if posts.size > 0 -%}
     {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
@@ -24,7 +25,7 @@ layout: default
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
-      <li>
+      <!-- <li>
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
@@ -34,6 +35,18 @@ layout: default
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
+      </li> -->
+
+      <li class="post-l">
+        <img src="{{post.fotos[0]}}"><br>
+        <span class="post-meta">{{ post.date | date: date_format }}</span><br>
+        <span class="post-meta"><strong>Vendedor: </strong>{{post.author}}</span><br>
+        <span class="post-meta"><strong>Preço: </strong>{{post.preco}}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
       </li>
       {%- endfor -%}
     </ul>
