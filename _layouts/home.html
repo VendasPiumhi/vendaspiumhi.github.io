@@ -22,7 +22,7 @@ layout: default
     {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
-    <ul class="post-list">
+    <ul class="post-list" id="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
       <!-- <li>
@@ -70,5 +70,13 @@ layout: default
     {%- endif %}
 
   {%- endif -%}
+
+  <script>
+    var sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('post-list'),
+      json: '/search.json'
+    });
+  </script>
 
 </div>

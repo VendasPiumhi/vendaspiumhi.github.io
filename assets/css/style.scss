@@ -63,3 +63,14 @@
 .site-title {
     font-weight: 500;
 }
+
+#search-input {
+    border: 2px solid #333;
+    border-radius: 4px;
+    outline: none;
+}
+
+#search-input:focus {
+    border: 2px solid rgb(37, 37, 37);
+    border-radius: 4px;
+}
