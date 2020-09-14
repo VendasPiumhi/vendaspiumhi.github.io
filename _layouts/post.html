@@ -2,7 +2,8 @@
 layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
+  <script src="/assets/js/fotos.js"></script>
+  <link rel="stylesheet" href="{{ '/assets/css/post.css' }}">
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
@@ -24,11 +25,38 @@ layout: default
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
       {%- endif -%}</p>
+
+      <span><strong>Vendedor: </strong> {{page.author}}</span><br>
+      <span><strong>Preço: </strong> {{page.preco}}</span><br>
+      <span><strong>Usado: </strong> 
+        {% if page.usado == "Sim" %}
+          Sim
+        {% else %}
+          Não
+        {% endif %}
+      </span><br>
+      <span><strong>Contato: </strong><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<strong>Email:</strong> {{page.email}}</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<strong>Telefone:</strong> {{page.numero}}</span>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
+    <script>
+      function a(){
+
+      }
+    </script>
+
+    <div class="fotos" onload="a()">
+      <div class="fotos-btn">
+        {% for foto in page.fotos %}
+          <button class="foto-btn" onclick="change_bg_to_img('fotos','{{foto}}')"></button>
+        {% endfor %}
+      </div>
+    </div>
     {{ content }}
   </div>
+
 
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
@@ -36,3 +64,19 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+
+<script type="text/javascript">
+  const btns = document.getElementsByClassName("foto-btn");
+  btns[0].click();
+  // var i = 0;
+
+  // setInterval(() => {
+  //   btns[i].click();
+    
+  //   if(i === btns.length){
+  //     i = 0;
+  //   } else {
+  //     i = i + 1;
+  //   }
+  // },6000);
+</script>

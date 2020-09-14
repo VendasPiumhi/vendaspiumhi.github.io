@@ -19,6 +19,7 @@ permalink: /anunciar
     <li>Número para contato</li>
     <li>Email para contato</li>
     <li>Preço</li>
+    <li>Descrição detalhada do produto</li>
 </ul>
 
 <p class="f">Envie um email com todas essas informações para: <br>vendaspiumhi.anunciar@gmail.com</p>

@@ -1,0 +1,52 @@
+---
+---
+
+.fotos {
+    // background-color: #000;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 150px;
+    height: 50vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.fotos-btn button {
+    border: 2px solid rgb(196, 191, 191);
+    background: none;
+    border-radius: 100%;
+    height: 15px;
+    width: 5px;
+
+    // height: 2vh;
+    // width: 1vw;
+    transition: border-color 0.6s;
+    outline: none;
+}
+
+.fotos-btn button:hover {
+    cursor: pointer;
+    border-color: #333;
+}
+
+.fotos-btn button:focus {
+    border-color: #333;
+}
+
+.fotos-btn button:active {
+    border-color: #333;
+}
+
+.post-title {
+    text-align: center;
+}
+
+.contato {
+    // margin: 0;
+}
