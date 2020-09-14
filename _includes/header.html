@@ -4,7 +4,7 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
 
     {%- if titles_size > 0 -%}
       <nav class="site-nav">
@@ -26,19 +26,19 @@
           {%- endfor -%}
         </div> -->
         <div class="trigger">
-          <a href="">Anunciar</a>
-          <a href="">Ajuda</a>
+          <a href="/anunciar">Anunciar</a>
+          <a href="/ajuda">Ajuda</a>
           <div class="categorias">
             <button class="categorias-btn">Categorias
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="categorias-content">
-              <a href="">Veículos</a>
-              <a href="">Dispositivos Eletrônicos</a>
-              <a href="">Acessórios</a>
-              <a href="">Brinquedos</a>
-              <a href="">Ferramentas e Materiais de Construção</a>
-              <a href="">Roupas</a>
+              <a href="/categoria/veiculos">Veículos</a>
+              <a href="/categoria/eletronicos">Dispositivos Eletrônicos</a>
+              <a href="/categoria/acessorios">Acessórios</a>
+              <a href="/categoria/brinquedos">Brinquedos</a>
+              <a href="/categoria/ferramentas">Ferramentas e Materiais de Construção</a>
+              <a href="/categoria/roupas">Roupas</a>
             </div>
           </div>
         </div>

@@ -1,0 +1,41 @@
+---
+---
+
+.page-content .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.page-content .wrapper i {
+    font-size: 70px;
+}
+
+.page-content .wrapper .title {
+    text-align: center;
+    padding: 8px;
+}
+
+.page-content .wrapper .x {
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.page-content .wrapper ul {
+    align-self: flex-start;
+    margin-top: 15px;
+}
+
+.page-content .wrapper ul li {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.page-content .wrapper .f {
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+}
