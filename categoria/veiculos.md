@@ -1,0 +1,4 @@
+---
+layout: categoria
+categoria: veiculos
+---
