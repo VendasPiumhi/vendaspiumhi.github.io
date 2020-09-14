@@ -17,13 +17,30 @@
           </span>
         </label>
 
-        <div class="trigger">
+        <!-- <div class="trigger">
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}
             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
+        </div> -->
+        <div class="trigger">
+          <a href="">Anunciar</a>
+          <a href="">Ajuda</a>
+          <div class="categorias">
+            <button class="categorias-btn">Categorias
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="categorias-content">
+              <a href="">Veículos</a>
+              <a href="">Dispositivos Eletrônicos</a>
+              <a href="">Acessórios</a>
+              <a href="">Brinquedos</a>
+              <a href="">Ferramentas e Materiais de Construção</a>
+              <a href="">Roupas</a>
+            </div>
+          </div>
         </div>
       </nav>
     {%- endif -%}
