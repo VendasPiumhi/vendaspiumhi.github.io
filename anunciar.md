@@ -16,6 +16,8 @@ permalink: /anunciar
     <li>Título do anúncio</li>
     <li>Categoria do produto</li>
     <li>Fotos do produto</li>
+    <li>Número para contato</li>
+    <li>Email para contato</li>
     <li>Preço</li>
 </ul>
 
