@@ -41,6 +41,7 @@ layout: default
         <img src="{{post.fotos[0]}}"><br>
         <span class="post-meta">{{ post.date | date: date_format }}</span><br>
         <span class="post-meta"><strong>Vendedor: </strong>{{post.author}}</span><br>
+        <span class="post-meta"><strong>Usado: </strong>{{post.usado}}</span><br>
         <span class="post-meta"><strong>Preço: </strong>{{post.preco}}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
